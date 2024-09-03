@@ -1462,7 +1462,8 @@ class LoggingLoggerVariable(VariableTracker):
         if tx.export:
             # For export cases, we can just make debugging functions no-ops
             return
-        unimplemented("Logger not supported for non-export cases")
+        # 2024-09-03 Ben Willis - This below line is commented to help export llama3 fx graphs without breaks
+        # unimplemented("Logger not supported for non-export cases")
 
 
 class ConstantLikeVariable(VariableTracker):
